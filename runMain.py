@@ -59,6 +59,8 @@ while True:
     cap = np.array([cap])
     sendbytes = pickle.dumps(cap)
     clientsocket.send(sendbytes)
+    msg = clientsocket.recv(4096)
+    print(msg.decode("utf-8")
     clientsocket.close()
     
 #     if steering < -0.5:
