@@ -21,6 +21,7 @@ p = pickle.loads(data)
 turn = model.predict(p)
 t = turn[0][0]
 print(t)
+s.send(bytes("hello", "utf-8"))
 
 
    
